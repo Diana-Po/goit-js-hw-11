@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery</title>
     <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  
-  <body>
+</head>
+<body>
     <form id="search-form">
-      <input type="text" id="search-input" placeholder="Search images...">
-      <button type="submit">Search</button>
-      </form>
-      <span class="loader hidden"></span>
-<main>
-  
-  <div id="gallery"></div>
-</main>
-    <script type="module" src="./js/pixabay-api.js"></script>
-  </body>
+        <input type="text" id="search-input" placeholder="Search images...">
+        <button type="submit">Search</button>
+    </form>
+
+    <div class="loader hidden"></div>
+
+    <main>
+        <ul id="gallery"></ul>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
 </html>
