@@ -14,9 +14,9 @@ export function fetchImages(query) {
 
     return axios
         .get(BASE_URL, { params })
-        .then(response => response.data.hits) 
+        .then(response => response.data.hits)
         .catch(error => {
             console.error("Error fetching images:", error);
-            throw new Error("Something went wrong. Please try again later!");
+            throw error;
         });
 }

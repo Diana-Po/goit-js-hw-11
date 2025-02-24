@@ -1,18 +1,22 @@
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-export function showLoader(loader) {
-    loader.classList.remove('hidden');
+export function showLoader() {
+    document.querySelector('.loader').classList.remove('hidden');
 }
 
-export function hideLoader(loader) {
-    loader.classList.add('hidden');
+export function hideLoader() {
+    document.querySelector('.loader').classList.add('hidden');
+}
+
+export function clearGallery() {
+    document.getElementById("gallery").innerHTML = "";
 }
 
 export function displayImages(images) {
     const gallery = document.getElementById("gallery");
 
-    gallery.innerHTML = ""; 
+    clearGallery();
 
     images.forEach(image => {
         const listItem = document.createElement('li');
@@ -29,7 +33,6 @@ export function displayImages(images) {
             <p>Downloads <span>${image.downloads}</span></p>
         </div>
     `;
-    
 
         gallery.appendChild(listItem);
     });
